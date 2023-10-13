@@ -1,0 +1,98 @@
+:root{
+    --primary-color: #0D6EFD;
+    --delete-color: #DC3545;
+    --success-color: #157347;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* The whole project */
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 50px; */
+}
+
+/* main container styling */
+
+.main{
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* input styling */
+.input-holder>input{
+    border: 1px solid black;
+    /* outline: 1px solid blue; */
+    background-color: whitesmoke;
+    padding: 7px 20px;
+    border-radius: 5px;
+}
+
+.input-holder>input:focus{
+    background-color: white;
+    border-color: var(--primary-color);
+}
+
+/* Task styling */
+.section-card{
+    display: flex;
+    gap: 20px;
+}
+
+.task{
+    display: flex;
+    justify-content: space-between;
+    background: whitesmoke;
+    margin: 5px;
+    padding: 10px;
+    
+}
+.task>button{
+    display: flex;
+    justify-content: flex-end;
+}
+/* add button */
+.btn-add{
+    background-color: var(--primary-color);
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    margin-left: -10px;
+}
+
+.btn-add:hover{
+    background-color: blue;
+   
+}
+
+/* delete button */
+.btn-delete{
+    background-color: var(--delete-color);
+    /* outline: 1px solid var(--delete-color); */
+    border: none;
+    color: white;
+    border-radius: 5px;
+    margin-left: -10px;
+}
+
+.btn-update{
+    background-color: var(--success-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: -10px;
+    display: flex;
+    justify-content: flex-end;
+}
