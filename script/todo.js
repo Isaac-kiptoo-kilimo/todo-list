@@ -115,7 +115,6 @@ function moveTaskToCompleted(task) {
 
 
 
-
 function updateTask(task) {
 const span = task.querySelector('span');
 const newTitle = prompt('Enter the new title for the task:', span.innerText);
@@ -129,8 +128,6 @@ if (newTitle !== null) {
 
 tasks.addEventListener('click', handleDelete);
 
-
-
 function handleDelete(event) {
     const targetElement = event.target;
     if (targetElement.innerText === 'Delete') {
@@ -142,7 +139,8 @@ function handleDelete(event) {
                 taskArray.splice(taskIndex, 1);
                 localStorage.setItem('tasks', JSON.stringify(taskArray));
             }
-            task.parentNode.removeChild(task);
+          
+            task.remove();
         }
     }
 }
