@@ -55,23 +55,22 @@ function createTask(title){
     const new_task=document.createElement('div');
     new_task.classList.add('task');
 
-    new_task.style.display='flex';
     
    
     const span=document.createElement('span');
+    span.classList.add('span');
     span.innerText=title;
 
     const new_btns=document.createElement('div');
     new_btns.classList.add('btns');
    
     const update_btn=document.createElement('button');
-    
+    update_btn.classList.add('update');
     update_btn.innerText='Update';
-    update_btn.style.backgroundColor='green';
-    update_btn.style.color='white';
+    
 
     const delete_btn=document.createElement('button');
-    
+    delete_btn.classList.add('delete');
     delete_btn.innerText="Delete";
     
     new_btns.append(update_btn,delete_btn);
@@ -105,11 +104,12 @@ function moveTaskToCompleted(task) {
     const taskButtons = task.querySelector('.task-buttons');
     if (taskButtons) {
         taskButtons.remove();
+        localStorage.setItem('tasks', JSON.stringify(taskArray));
         // localStorage.setItem('tasks', JSON.stringify(taskArray));
     }
 
     second_task.appendChild(task);
-    localStorage.setItem('tasks', JSON.stringify(taskArray));
+    
 }
 
 
@@ -144,7 +144,3 @@ function handleDelete(event) {
         }
     }
 }
-
-
-
-

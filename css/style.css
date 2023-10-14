@@ -1,98 +1,118 @@
-:root{
-    --primary-color: #0D6EFD;
-    --delete-color: #DC3545;
-    --success-color: #157347;
+:root {
+  --primary-color: #0d6efd;
+  --delete-color: #dc3545;
+  --success-color: #157347;
 }
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
+
+body {
+  background-color: #e1e3ea;
+  font-family: 'Geologica', sans-serif;
+/* font-family: 'Outfit', sans-serif; */
+/* font-family: 'Poppins', sans-serif; */
+/* font-family: 'Rubik', sans-serif; */
+}
 
 /* The whole project */
 
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* margin-top: 50px; */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  /* margin-top: 50px; */
 }
 
 /* main container styling */
 
-.main{
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.main {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 /* input styling */
-.input-holder>input{
-    border: 1px solid black;
-    /* outline: 1px solid blue; */
-    background-color: whitesmoke;
-    padding: 7px 20px;
-    border-radius: 5px;
+.input-holder > input {
+  border: 1px solid black;
+  /* outline: 1px solid blue; */
+  background-color: whitesmoke;
+  padding: 7px 20px;
+  border-radius: 5px;
 }
 
-.input-holder>input:focus{
-    background-color: white;
-    border-color: var(--primary-color);
+.input-holder > input:focus {
+  background-color: white;
+  border-color: var(--primary-color);
 }
 
 /* Task styling */
-.section-card{
-    display: flex;
-    gap: 20px;
+.section-card {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.task{
-    display: flex;
-    justify-content: space-between;
-    background: whitesmoke;
-    margin: 5px;
-    padding: 10px;
-    
+.task {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  padding: 10px;
+  background-color: #262e4c;
+  border-bottom: 1px solid #3a4674;
 }
-.task>button{
-    display: flex;
-    justify-content: flex-end;
+
+.btns {
+  display: flex;
+  gap: 8px;
 }
+
 /* add button */
-.btn-add{
-    background-color: var(--primary-color);
-    outline: none;
-    border: none;
-    color: white;
-    border-radius: 0 5px 5px 0;
-    margin-left: -10px;
+.btn-add {
+  background-color: var(--primary-color);
+  outline: none;
+  border: none;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  margin-left: -10px;
 }
 
-.btn-add:hover{
-    background-color: blue;
-   
+.btn-add:hover {
+  background-color: blue;
 }
 
-/* delete button */
-.btn-delete{
-    background-color: var(--delete-color);
-    /* outline: 1px solid var(--delete-color); */
-    border: none;
-    color: white;
-    border-radius: 5px;
-    margin-left: -10px;
+.span{
+    font-size: 20px;
+    font-weight: 800;
+}
+.update {
+  background-color: var(--success-color);
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  /* margin-left: -10px; */
+  /* display: flex; */
+  /* justify-content: flex-end; */
+}
+.delete {
+  background-color: white;
+  color: #dc3545;
+  padding: 5px;
+  border-radius: 5px;
+  outline: 1px solid #dc3545;
+  border: none;
 }
 
-.btn-update{
-    background-color: var(--success-color);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    margin-left: -10px;
-    display: flex;
-    justify-content: flex-end;
+.completed {
+  text-decoration: line-through;
+  background-color: #80a9dc;
 }
