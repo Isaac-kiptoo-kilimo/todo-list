@@ -104,10 +104,12 @@ function moveTaskToCompleted(task) {
     const taskButtons = task.querySelector('.task-buttons');
     if (taskButtons) {
         taskButtons.remove();
-        localStorage.setItem('tasks', JSON.stringify(taskArray));
-        // localStorage.setItem('tasks', JSON.stringify(taskArray));
+    
+        
+        
     }
 
+    localStorage.setItem('tasks', JSON.stringify(taskArray));
     second_task.appendChild(task);
     
 }
